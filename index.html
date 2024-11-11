@@ -1,7 +1,7 @@
 <html>
 <body>test32</body>
 <script type="text/javascript">
-  loadCarrotquest() {
+  function loadCarrotquest() {
             !(function() {
                 function t(t, e) {
                     return function() {
@@ -33,10 +33,10 @@
                     }
                 }
             })();
-            this.connectCarrotquest()
+            connectCarrotquest()
 
         },
-        connectCarrotquest() {
+        function connectCarrotquest() {
             const config = this.lang == 'ru' ? ruConfig : enConfig
             carrotquest.connect('34467-f6165b62e84b701a8e4518b730', config);
         }
