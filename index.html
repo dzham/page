@@ -3,52 +3,17 @@
     <br><br><br><br>
     <a href="#" onclick="carrotquest.open()" style="font-size:36px;" >Написать нам</a>
     <br>
-  <script type="text/javascript">
-  function loadCarrotquest() {
-            !(function() {
-                function t(t, e) {
-                    return function() {
-                        window.carrotquestasync.push(t, arguments);
-                    };
-                }
-                if (typeof carrotquest === 'undefined') {
-                    var e = document.createElement('script');
-                    e.type = 'text/javascript';
-                    e.async = true;
-                    e.src = '//cdn.carrotquest.io/api.min.js';
-                    document.getElementsByTagName('head')[0].appendChild(e);
-                    window.carrotquest = {};
-                    window.carrotquestasync = [];
-                    carrotquest.settings = {};
-                    var n = [
-                        'connect',
-                        'track',
-                        'identify',
-                        'auth',
-                        'oth',
-                        'onReady',
-                        'addCallback',
-                        'removeCallback',
-                        'trackMessageInteraction'
-                    ];
-                    for (var a = 0; a < n.length; a++) {
-                        carrotquest[n[a]] = t(n[a]);
-                    }
-                }
-            })();
-            connectCarrotquest()
 
-        };
-        function connectCarrotquest() {
-            carrotquest.connect('65145-6864feb254b58ce4a7501f830c', {});
-            carrotquest.onReady(function () {
+    <!-- Carrot quest BEGIN -->
+<script type="text/javascript">
+!function(){function t(t,e){return function(){window.carrotquestasync.push(t,arguments)}}if("undefined"==typeof carrotquest){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://cdn.carrotquest.app/api.min.js",document.getElementsByTagName("head")[0].appendChild(e),window.carrotquest={},window.carrotquestasync=[],carrotquest.settings={};for(var n=["connect","track","identify","auth","onReady","addCallback","removeCallback","trackMessageInteraction"],a=0;a<n.length;a++)carrotquest[n[a]]=t(n[a])}}(),carrotquest.connect("65145-6864feb254b58ce4a7501f830c");
+</script>
+<!-- Carrot quest END -->
+  <script type="text/javascript">
+   carrotquest.onReady(function () {
                 //carrotquest.removeChat();
-                //carrotquest.open();
+                carrotquest.open();
             });
-            
-            
-        }
-  loadCarrotquest();
 </script>
 
     
