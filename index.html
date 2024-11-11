@@ -1,3 +1,46 @@
 <html>
 <body>test</body>
+<script type="text/javascript">
+  loadCarrotquest() {
+            !(function() {
+                function t(t, e) {
+                    return function() {
+                        window.carrotquestasync.push(t, arguments);
+                    };
+                }
+                if (typeof carrotquest === 'undefined') {
+                    var e = document.createElement('script');
+                    e.type = 'text/javascript';
+                    e.async = true;
+                    e.src = '//cdn.carrotquest.io/api.min.js';
+                    document.getElementsByTagName('head')[0].appendChild(e);
+                    window.carrotquest = {};
+                    window.carrotquestasync = [];
+                    carrotquest.settings = {};
+                    var n = [
+                        'connect',
+                        'track',
+                        'identify',
+                        'auth',
+                        'oth',
+                        'onReady',
+                        'addCallback',
+                        'removeCallback',
+                        'trackMessageInteraction'
+                    ];
+                    for (var a = 0; a < n.length; a++) {
+                        carrotquest[n[a]] = t(n[a]);
+                    }
+                }
+            })();
+            this.connectCarrotquest()
+
+        },
+        connectCarrotquest() {
+            const config = this.lang == 'ru' ? ruConfig : enConfig
+            carrotquest.connect('34467-f6165b62e84b701a8e4518b730', config);
+        }
+  alert();
+  loadCarrotquest();
+</script>
 </html>
