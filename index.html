@@ -1,6 +1,8 @@
 <html>
-<body>test32</body>
-<script type="text/javascript">
+  <body>
+    <a href="#" onclick="carrotquest.open()">Написать нам</a>
+    <br>
+  <script type="text/javascript">
   function loadCarrotquest() {
             !(function() {
                 function t(t, e) {
@@ -35,12 +37,18 @@
             })();
             connectCarrotquest()
 
-        },
+        };
         function connectCarrotquest() {
-            const config = this.lang == 'ru' ? ruConfig : enConfig
-            carrotquest.connect('34467-f6165b62e84b701a8e4518b730', config);
+            carrotquest.connect('34467-f6165b62e84b701a8e4518b730', {});
+            carrotquest.onReady(function () {
+                carrotquest.removeChat();
+                carrotquest.open();
+            });
+            
+            
         }
   alert();
   loadCarrotquest();
 </script>
+</body>
 </html>
